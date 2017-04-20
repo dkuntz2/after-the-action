@@ -13,3 +13,10 @@ Backwards compatibility is not guaranteed, but most lower versions of Python 3 _
 - Install [foreman](https://ddollar.github.io/foreman/) (`gem install foreman`)
 - `foreman start`
 - Curl locally on port 5000 (by default, you can use `foreman start -p <port>` to change that)
+
+## Tools
+
+Two convenience scripts have been added to make life easier:
+
+-   `bin/db` - manage the DB using orator's tools, and the connection defined in the application
+-   `bin/console` - open a console with `after_action.db` and `after_action.app` imported as `db` and `app`. This is entirely a convenience tool.
