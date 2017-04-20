@@ -1,5 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_orator import Orator
+
+from .models import User, Report
 
 app = Flask("After the Action")
 app.config["ORATOR_DATABASES"] = {
@@ -12,3 +14,7 @@ app.config["ORATOR_DATABASES"] = {
 }
 
 db = Orator(app)
+
+@app.route("/")
+def index():
+    return render_template("index.html", users=User.all(), reports=Report.all())
