@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+# HACKS!!!!
+import os, sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
+from after_action import db
+
+if __name__ == '__main__':
+    db.cli.run()
