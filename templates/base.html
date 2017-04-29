@@ -2,8 +2,34 @@
 <html>
     <head>
         <title>After the Action</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        {% block main %}{% endblock %}
+        <article>
+            <header>
+                <h1><a href="/">After the Action</a></h1>
+                {# <p class="subheading"> #}
+                {#     The future home of megagame After Action Reports. #}
+                {# </p> #}
+
+                <nav class="global">
+                    <ul class="main-nav">
+                        {# <li><a href="/about">About</a></li> #}
+                        <li><a href="/reports">Reports</a></li>
+                    </ul>
+
+                    <ul class="user-nav">
+                    {% if is_admin() %}
+                        <li><a href="/admin">Admin</a></li>
+                    {% endif %}
+                    {% if current_user() %}
+                        <li><a href="/user">{{ current_user().username }}</a></li>
+                    {% endif %}
+                    </ul>
+                </nav>
+            </header>
+
+            {% block main %}{% endblock %}
+        </article>
     </body>
 </html>

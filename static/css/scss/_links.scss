@@ -1,0 +1,14 @@
+a {
+  color: black;
+  text-decoration: none;
+
+  border-bottom: 3px solid rgb(200, 200, 200);
+
+  &:hover {
+    border-bottom-color: rgb(125, 125, 125);;
+  }
+
+  &:active {
+    border-bottom-color: rgb(50, 50, 50);
+  }
+}

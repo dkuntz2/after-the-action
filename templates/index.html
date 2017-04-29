@@ -1,41 +1,53 @@
 {% extends 'base.html' %}
-
 {% block main %}
-    <h1>After the Action</h1>
+<section>
+    <h1>After Action Reports?</h1>
 
-    <table id="users">
-        <thead>
-            <tr>
-                <th>pk</th>
-                <th>username</th>
-                <th>name</th>
-                <th>email</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for user in users %}
-            <tr>
-                <td>{{ user.pk }}</td>
-                <td>{{ user.username }}</td>
-                <td>{{ user.name }}</td>
-                <td>{{ user.email }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="row">
+        <p>
+            After Action Reports, or AARs, are a form of community engagement for <a href="https://boundy.me.uk/Games/Megagames/Definition/index.html">Megagames</a>.
+            After playing in a game, most organizers will invite players to put together an AAR, describing their game experience.
+            These are then shared between players and other megagame enthusiasts.
+        </p>
+    </div>
+</section>
 
-    <table id="reports">
-        <tr>
-            <th>pk</th>
-            <th>title</th>
-            <th>author</th>
-        </tr>
-        {% for report in reports %}
-        <tr>
-            <td>{{ report.pk }}</td>
-            <td>{{ report.title }}</td>
-            <td>{{ report.author.name }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+<section>
+    <h1>Why Create This Site?</h1>
+
+    <div class="row">
+        <p>
+            Traditionally players post their AARs in a variety of places
+        </p>
+
+        <ul>
+            <li>Reddit</li>
+            <li>Facebook Groups</li>
+            <li>Personal Blogs</li>
+            <li>Other generally disparate locations on the internet</li>
+        </ul>
+
+        <p>
+            This is non-optimal for a variety of reasons, the biggest one being that they fracture the community.
+            Given that megagames are already a fairly niche topic, a lack of centralized resources makes it hard for new community members to get involved.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h1> Getting Involved</h1>
+
+    <div class="row">
+        <p>
+            After the Action is still in active development, and not ready to go live.
+            If you're interested in getting involved, email me at <a href="mailto:don@kuntz.co">don@kuntz.co</a>.
+        </p>
+
+        <p>
+            Development is done in the open, and the eventual source that will be run here can be found on <a href="https://github.com/dkuntz2/after-the-action">GitHub</a>.
+            Contributions are more than welcome.
+        </p>
+    </div>
+</section>
+
 {% endblock %}

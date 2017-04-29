@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<section>
+    <h1>Users</h1>
+    <table id="users">
+        <thead>
+            <tr>
+                <th>pk</th>
+                <th>username</th>
+                <th>name</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.pk }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h1>Reports</h1>
+    <table id="reports">
+        <tr>
+            <th>pk</th>
+            <th>title</th>
+            <th>author</th>
+        </tr>
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.pk }}</td>
+            <td>{{ report.title }}</td>
+            <td>{{ report.author.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+{% endblock %}
